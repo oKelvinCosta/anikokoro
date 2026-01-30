@@ -4,9 +4,6 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   reactStrictMode: true,
-  images: {
-    formats: ["image/webp"],
-  },
 };
 
 export default nextConfig;

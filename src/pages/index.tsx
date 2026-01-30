@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <>
-      <div className="bg-slate-950 h-screen text-white flex lg:items-center">
+      <div className="bg-gradient-to-b from-slate-950 to-slate-900 h-screen text-white flex lg:items-center">
         {/* Grid */}
         <main className="w-full h-screen grid lg:items-center grid-cols-1 gap-6 lg:grid-cols-12">
           <div className="h-[50vh] lg:h-auto lg:col-span-5 relative rounded-4xl">
