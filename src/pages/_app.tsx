@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Archivo } from "next/font/google";
-import { Archivo_Black } from "next/font/google";
+import { Archivo, Archivo_Black } from "next/font/google";
 const archivo = Archivo({
   subsets: ["latin"],
   variable: "--font-archivo",

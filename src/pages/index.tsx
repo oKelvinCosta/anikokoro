@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,7 +13,8 @@ export default function Home() {
               width={578}
               height={900}
               alt=""
-              quality={90}
+              quality={100}
+              unoptimized
               className=" max-h-[50vh] h-full lg:min-h-screen p-8 object-cover rounded-[45px] w-full"
             />
 
