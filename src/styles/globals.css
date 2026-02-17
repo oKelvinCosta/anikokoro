@@ -67,7 +67,7 @@
 /* Inline is used to reference the variables */
 @theme inline {
   --font-text: var(--font-archivo);
-  --font-title: var(--font-archivo-black);
+  --font-title: var(--font-archivo);
 
   /* Explicit color mapping to avoid syntax errors */
   --color-background: var(--background);
@@ -108,6 +108,12 @@
 
 /* BASE LAYERS AND TYPOGRAPHY */
 @layer base {
+  .font-title {
+    @apply font-title;
+  }
+  .font-text {
+    @apply font-text;
+  }
   body {
     @apply bg-background text-foreground font-text text-base antialiased;
     letter-spacing: 0.005em;
@@ -133,7 +139,7 @@
   }
 
   p {
-    @apply my-5 text-base font-text leading-relaxed;
+    @apply my-3 text-base font-text leading-relaxed;
   }
 
   p > a {

@@ -14,7 +14,7 @@ const archivoBlack = Archivo_Black({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`dark ${archivo.variable} ${archivoBlack.variable}`}>
+    <div className={` ${archivo.variable} ${archivoBlack.variable}`}>
       <Component {...pageProps} />
     </div>
   );
