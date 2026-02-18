@@ -5,9 +5,9 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import LastRead from "./last-read";
+import { LastRead } from "./last-read";
 import { PopularAnimes } from "./popular-animes";
-import RecentRatings from "./recent-ratings";
+import { RecentRatings } from "./recent-ratings";
 
 export default function Dashboard() {
   return (

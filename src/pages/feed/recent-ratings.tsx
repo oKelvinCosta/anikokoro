@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
-export default function RecentRatings() {
+export function RecentRatings() {
   return (
     <div id="recent-ratings">
       <p className="font-title">Avaliações mais recentes</p>

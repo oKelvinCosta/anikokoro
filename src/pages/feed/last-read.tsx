@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CaretRightIcon } from "@phosphor-icons/react";
 import Image from "next/image";
 
-export default function LastRead() {
+export function LastRead() {
   return (
     <div id="last-read" className="mb-10">
       <div className="flex justify-between items-center">
