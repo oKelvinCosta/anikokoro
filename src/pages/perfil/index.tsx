@@ -1,4 +1,4 @@
-import { FormExplore } from "@/components/form-explore";
+import { FormRated } from "@/components/form-rated";
 import { StarRating } from "@/components/star-rating";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,7 +24,7 @@ export default function Perfil() {
         {/* Content */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-12 ">
           <main className="md:col-span-8">
-            <FormExplore />
+            <FormRated />
             <div id="my-ratings" className="mt-10">
               <p className="text-sm text-gray-300">Há 2 dias</p>
               <div className="flex flex-col gap-4">
