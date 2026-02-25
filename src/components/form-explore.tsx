@@ -4,9 +4,9 @@ import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 
-export function FormExplore() {
+export function FormExplore({ ...props }: React.ComponentProps<"form">) {
   return (
-    <form>
+    <form {...props}>
       <Field>
         <ButtonGroup>
           <Input

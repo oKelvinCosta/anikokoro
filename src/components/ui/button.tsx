@@ -19,6 +19,14 @@ const buttonVariants = cva(
         ghost: "text-secondary hover:bg-accent hover:text-secondary/80",
         slate: "bg-slate-800 text-primary-foreground hover:bg-slate-800/80",
         link: "text-primary underline-offset-4 hover:underline",
+        tag: "border border-primary text-primary shadow-xs hover:bg-accent hover:text-secondary hover:border-secondary !rounded-full",
+        "tag-selected":
+          "border border-secondary bg-secondary text-gray-950 shadow-xs hover:bg-secondary/80   rounded-full",
+
+        "tag-1":
+          "border border-primary bg-primary text-gray-950 shadow-xs hover:bg-accent hover:text-secondary hover:border-secondary !rounded-full",
+        "tag-2":
+          "border border-primary bg-primary/70 text-gray-950 shadow-xs hover:bg-accent hover:text-secondary hover:border-secondary !rounded-full",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
