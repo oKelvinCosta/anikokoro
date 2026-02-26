@@ -160,6 +160,23 @@
     outline: 2px solid var(--primary) !important;
     outline-offset: 2px;
   }
+
+  /* Scrollbar */
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    visibility: visible; /* Show scrollbar even if not scrolling */
+  }
+  ::-webkit-scrollbar-track {
+    background: #181c2a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #252d4a;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #303f73;
+  }
 }
 
 /* CUSTOM UTILITIES */

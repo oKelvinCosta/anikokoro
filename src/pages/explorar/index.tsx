@@ -2,6 +2,7 @@ import { FormExplore } from "@/components/form-explore";
 import { StarRating } from "@/components/star-rating";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { RightMenu } from "@/pages/explorar/right-menu";
 import { LoggedLayout } from "@/pages/layout/logged-layout";
 import { BinocularsIcon } from "@phosphor-icons/react";
 import Image from "next/image";
@@ -23,6 +24,10 @@ export default function Explorar() {
         <Button variant="tag">Computação</Button>
         <Button variant="tag">Fantasia</Button>
       </div>
+
+      <RightMenu>
+        <div>Filter content</div>
+      </RightMenu>
 
       {/* Content */}
       <div>
