@@ -17,7 +17,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export function RightMenu({ children }: { children: React.ReactNode }) {
-  const [showRate, setShowRate] = useState(false);
+  const [showRate, setShowRate] = useState(true);
   const [isLogged, setIsLogged] = useState(true);
 
   function handleShowRate() {

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
+import { useState } from "react";
 
 const starVariants = cva("transition-all duration-200", {
   variants: {
@@ -15,10 +16,9 @@ const starVariants = cva("transition-all duration-200", {
 });
 
 interface StarProps extends VariantProps<typeof starVariants> {
-  filled: boolean;
+  filled?: boolean;
   fillColor?: string;
   strokeColor?: string;
-  //
   // extends VariantProps<typeof starVariants> is the same as:
   // size?: "default" | "lg";
   // interactive?: boolean;
@@ -26,7 +26,7 @@ interface StarProps extends VariantProps<typeof starVariants> {
 
 // Star unit Component
 function Star({
-  filled,
+  filled = false,
   size = "default",
   interactive = false,
   fillColor = "#F40C34",
@@ -53,7 +53,7 @@ function Star({
 
 // Star Rating Component
 
-interface StarRatingProps {
+interface StarRatingProps extends StarProps {
   rating: number;
   maxRating?: number;
 }
@@ -61,14 +61,43 @@ interface StarRatingProps {
 export function StarRating({
   rating,
   maxRating = 5,
+  size = "default",
+  interactive = false,
   ...props
 }: StarRatingProps) {
+  const [currentRating, setCurrentRating] = useState(rating);
+
+  function handleStarClick(index: number) {
+    const ID = index + 1;
+    console.log(ID);
+    // Set the current rating
+    setCurrentRating((state) =>
+      state === ID
+        ? ID >= 1
+          ? // but if you click the same star again, set it to -1 (empty)
+            ID - 1
+          : 0
+        : // Set the current rating
+          ID
+    );
+  }
+
   return (
     <div className="flex gap-0" {...props}>
       {Array(maxRating)
         .fill(0)
         .map((_, index) => (
-          <Star key={index} filled={rating >= index + 1} />
+          <div
+            key={index}
+            className="inline-block"
+            onClick={interactive ? () => handleStarClick(index) : undefined}
+          >
+            <Star
+              filled={currentRating >= index + 1}
+              size={size}
+              interactive={interactive}
+            />
+          </div>
         ))}
     </div>
   );
